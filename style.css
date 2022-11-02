@@ -6,9 +6,9 @@
 }
 
 :root {
-    --color-white: #ffffff;
-    --color-black: #000000;
-    --color-green: #0c423a;
+    --color-white: #faf6f0;
+    --color-black: #090909;
+    --color-green: #b9191d;
     --color-grey: #88989e;
     --color-olive: #576151;
 
@@ -26,13 +26,13 @@
 * { box-sizing: border-box; }
 
 body {
-    font-family:'GangwonEdu_OTFBoldA';
+    font-family: 'Inconsolata', monospace;
     margin: 0;
 }
 
 a {
     text-decoration: none;
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 ul {
@@ -44,7 +44,7 @@ li {
 }
 
 button {
-    background-color: var(--color-white);
+    background-color: var(--color-black);
     cursor: pointer;
     border: none;
     outline: none;
@@ -80,29 +80,36 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
-    background-color: var(--color-green);
+    /* padding: 16px; */
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-white);
 }
 
-.navbar_logo {
+/* .navbar_logo {
     font-size: var(--font-medium);
     font-weight: bold;
-    color: var(--color-white);
-}
+    color: #090909;
+} */
 
 .navbar_menu {
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar_menu_item {
-    padding: 8px 12px;
+    padding: 8px 20px;
     margin: 0 4px;
-    color: var(--color-white);
+    color: #090909;
     cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 90px;
 }
 
 .navbar_menu_item.active {
-    border: 1px solid white;
+    /* border: 1px solid #090909; */
     border-radius: var(--size-border-radius);
 }
 
@@ -116,26 +123,51 @@ p {
     top: 24px;
     right: 32px;
     font-size: 24px;
-    color: var(--color-white);
+    color: #090909;
     display: none;
 }
 
 /* 홈 */
 #home {
-    background: url(./images/Nature.png) center/cover no-repeat;
-    padding: 40px;
+    /* background: url(./images/Nature.png) center/cover no-repeat; */
+    /* padding: 40px; */
     text-align: center;
 }
 
+video {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 1900px;
+    height: 900px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
 .home_avatar {
-    width: 250px;
-    height: 250px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 2px solid var(--color-white);
+    margin: 80px;
 }
 
 .home_title, .home_description {
-    color: var(--color-white);
+    color: var(--color-black);
 }
 
 .home_contact {
@@ -148,15 +180,132 @@ p {
     border-radius: var(--size-border-radius);
 }
 
+.home_description {
+    font-family: 'GangwonEdu_OTFBoldA';
+}
 
+.section {
+    padding: 50px;
+    text-align: center;
+    margin: auto;
+}
 
+.section__container {
+    max-width: 1200px;
+    margin: auto;
+}
 
+.about__majors {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
 
+.major_icon {
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+    font-size: 70px;
+    margin: auto;
+    color: var(--color-green);
+    border: 1px solid var(--color-green);
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
 
+.major_icon i {
+    transition: all var(--animation-duration) ease;
+}
 
+.major_icon:hover i{
+    color: var(--color-green);
+    transform: rotate(-30deg) scale(1.1);
+}
 
+/* 내 소개 */
+.profile {
+    display: flex;
+}
 
+.profileimg {
+    width: 45%;
+}
 
+.profileimg img {
+    max-width: 100%;
+    vertical-align: middle;
+}
 
+.profilecontent {
+    width: 85%;
+    margin-left: 50px;
+    text-align: left;
+}
 
+.profilewrapper {
+    width: 65%;
+    margin: 0 auto;
+}
 
+.profilecontent h2 {
+    margin-top: 0px;
+}
+
+.profilecontent p {
+    padding-top: 20px;
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 16px;
+}
+
+.job img {
+    width: 270px;
+    height: 270px;
+    line-height: 270px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+
+.job img:hover {
+    color: var(--color-green);
+    transform: scale(1.1);
+}
+
+.job {
+    margin-bottom: 40px;
+}
+
+.project_img {
+    width: 400px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+.category__btn {
+    background-color: var(--color-white);
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.job_company {
+    font-weight: bold;
+}
+
+.major_title {
+    font-family: 'GangwonEdu_OTFBoldA';
+}
+
+#korean {
+    font-family: 'GangwonEdu_OTFBoldA';
+}
+
+/* 추천서 */
+.testimonial_speech-bubble {
+    line-height: 24px;
+    margin-top: 40px;
+}
+
+.name {
+    font-style: italic;
+    padding: 10px;
+}
