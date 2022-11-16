@@ -77,6 +77,9 @@ p {
 
 /* NavBar */
 #navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,6 +87,12 @@ p {
     margin: 0;
     padding: 0;
     background-color: var(--color-white);
+    transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--bold {
+    background-color:var(--color-white);
+    padding: 10px;
 }
 
 /* .navbar_logo {
@@ -308,4 +317,37 @@ video {
 .name {
     font-style: italic;
     padding: 10px;
+}
+
+/* scroll */
+.scrollUp {
+    /* position: fixed; */
+    display: block;
+    text-align: right;
+    background-color: var(--color-white);
+    margin: 0 auto;
+}
+
+#scrollUpArrow {
+    font-size: 40px;
+}
+
+.arrow-up {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-in;
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto;
 }

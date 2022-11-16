@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Navbar 시작 -->
@@ -21,12 +22,12 @@
             <a href="#">Sophia's Portfolio</a>
         </div> -->
         <ul class="navbar_menu">
-            <a href="#home"><li class="navbar_menu_item active">Home</li></a>
-            <a href="#about"><li class="navbar_menu_item">About</li></a>
-            <a href="#skills"><li class="navbar_menu_item">Skills</li></a>
-            <a href="#work"><li class="navbar_menu_item">Projects</li></a>
-            <a href="#testimonials"><li class="navbar_menu_item">Praise</li></a>
-            <a href="#contact"><li class="navbar_menu_item">Contact</li></a>
+            <li class="navbar_menu_item active" data-link="#home">Home</li>
+            <li class="navbar_menu_item" data-link="#about">About</li>
+            <li class="navbar_menu_item" data-link="#skills">Skills</li>
+            <li class="navbar_menu_item" data-link="#work">Projects</li>
+            <li class="navbar_menu_item" data-link="#testimonials">Praise</li>
+            <li class="navbar_menu_item" data-link="#contact">Contact</li>
         </ul>
         <!-- 버튼 시작 -->
         <button class="navbar_toggle-btn">
@@ -47,7 +48,7 @@
             <img src="./images/tree.png" alt="tree" class="home_avatar">
             <h1 class="home_title">Hello World!</h1>
             <h2 class="home_description">👋 안녕하세요, 서울에 살고 있는 웹개발자 김하영 입니다.</h2>
-            <!-- <button class="home_contact">연락주세요</button> -->
+            <button class="home_contact">연락주세요</button>
         </div>
     </section>
     <!-- Home 끝 -->
@@ -219,35 +220,35 @@
             <h1>내 작업실</h1>
             <h3>Projects</h3>
             <div class="work_categories">
-                <button class="category__btn">
+                <button class="category__btn" data-filter="*">
                     전체 <span class="category__count">3</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="front-end">
                     프론트엔드 <span class="category__count">5</span>
                 </button>
-                <button class="category__btn">
+                <button class="category__btn" data-filter="back-end">
                     백엔드 <span class="category__count">TBA</span>
                 </button>
-                <!-- <button class="category__btn">
+                <!-- <button class="category__btn" data-filter="mobile">
                     모바일 <span class="category__count">2</span>
                 </button> -->
             </div>
             <div class="work__projects">
-                <a href="" class="project" target="_blank">
+                <a href="#" class="project" target="_blank" data-type="front-end">
                     <img src="./images/lazyflix.png" alt="movie website" class="project_img">
                     <div class="project__description">
                         <h3>Lazyflix</h3>
                         <a href="https://www.lazyflix.netlify.app/"><span>https://www.lazyflix.netlify.app/</span></a>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="#" class="project" target="_blank" data-type="front-end">
                     <img src="./images/whattoeat.png" alt="meal website" class="project_img">
                     <div class="project__description">
                         <h3>What to Eat?</h3>
                         <a href="https://www.effulgent-faun-bb201d.netlify.app/"><span>https://www.effulgent-faun-bb201d.netlify.app/</span></a>
                     </div>
                 </a>
-                <a href="" class="project" target="_blank">
+                <a href="#" class="project" target="_blank" data-type="front-end">
                     <img src="./images/dailyheadline.png" alt="news website" class="project_img">
                     <div class="project__description">
                         <h3>Daily Headlines</h3>
@@ -302,8 +303,10 @@
             2022 Sophie - All rights reserved
         </p>
     </section>
-    <!-- <button class="arrow-up">
+    <button class="arrow-up">
         <i class="fa-solid fa-arrow-up"></i>
-    </button> -->
+    </button>
+    
+    <!-- <button onclick="scrollToTop()" class="scrollUp"><i class="fa-solid fa-arrow-up-long" id="scrollUpArrow"></i></button> -->
 </body>
 </html>
